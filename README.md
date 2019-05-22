@@ -2,7 +2,8 @@
 
 This is a simple Docker image intended to be used for local development of Linux programming homework assignments that typically run on a Centos server.
 
-[Docker Hub](https://hub.docker.com/r/nathanperkins/os1)
+- [Docker Hub](https://hub.docker.com/r/nathanperkins/os1)
+- [GitHub](https://github.com/nathanperkins/os1)
 
 # Instructions
 
