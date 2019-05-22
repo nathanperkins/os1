@@ -1,3 +1,9 @@
+# Description
+
+This is a simple Docker image intended to be used for local development of Linux programming homework assignments that typically run on a Centos server.
+
+[Docker Hub](https://hub.docker.com/r/nathanperkins/os1)
+
 # Instructions
 
 1. [Install Docker](https://docs.docker.com/install/).
