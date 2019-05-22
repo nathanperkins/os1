@@ -38,8 +38,8 @@ $ docker run --rm -it -v "$(pwd):/workspace" -w "/workspace" --name os1 nathanpe
 
 - [docker run](https://docs.docker.com/engine/reference/commandline/run/) - creates and starts a new container from an image.
 - `-it` - runs the container in interactive mode and attaches a terminal.
-- `-v "$(pwd):/workspace"` - uses [docker volumes](https://docs.docker.com/storage/volumes/) to map a local directory to a directory inside the container. This allows you to use your local files inside the container and have the changes synced both ways.
-- `--rm` - deletes the container itself and any anonymous volumes when done. This does not affect your workspace that is mapped above.
+- `-v "$(pwd):/workspace"` - uses [docker volumes](https://docs.docker.com/storage/volumes/) to map the current local directory to a directory inside the container. This allows you to use your local files inside the container and have the changes synced both ways.
+- `--rm` - deletes the container itself and any anonymous volumes when done. This does not affect your workspace volume that was explicitly mapped above.
 - `-w "/workspace"` - opens the container `/workspace` as the current working directory.
 - `--name os1` - names the container "os1" so that you can easily start it again as needed.
 - `nathanperkins/os1` - the name of the image on Docker Hub, [found here](https://hub.docker.com/r/nathanperkins/os1)
