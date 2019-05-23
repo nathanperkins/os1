@@ -4,6 +4,7 @@ This is a simple Docker image intended to be used for local development of Linux
 
 - [Docker Hub](https://hub.docker.com/r/nathanperkins/os1)
 - [GitHub](https://github.com/nathanperkins/os1)
+- [More info about docker](http://johncodes.com/2018/11/12/docker_centos/) (from OSU's John McBride)
 
 # Instructions
 
@@ -18,7 +19,7 @@ This is a simple Docker image intended to be used for local development of Linux
 ```bash
 # navigate to your workspace and create the container
 $ cd ~/git/osu-cs344/
-$ docker run --rm -it -v "$(pwd):/workspace" -w "/workspace" --name os1 nathanperkins/os1
+$ docker run --rm -it -v "$(pwd):/workspace" -w "/workspace" nathanperkins/os1
 
 # you are now inside the container and your workspace should be here as well
 [root@2d51aa00977b workspace]# ls
@@ -41,5 +42,4 @@ $ docker run --rm -it -v "$(pwd):/workspace" -w "/workspace" --name os1 nathanpe
 - `-v "$(pwd):/workspace"` - uses [docker volumes](https://docs.docker.com/storage/volumes/) to map the current local directory to a directory inside the container. This allows you to use your local files inside the container and have the changes synced both ways.
 - `--rm` - deletes the container itself and any anonymous volumes when done. This does not affect your workspace volume that was explicitly mapped above.
 - `-w "/workspace"` - opens the container `/workspace` as the current working directory.
-- `--name os1` - names the container "os1" so that you can easily start it again as needed.
 - `nathanperkins/os1` - the name of the image on Docker Hub, [found here](https://hub.docker.com/r/nathanperkins/os1)
